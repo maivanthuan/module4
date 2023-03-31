@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/create}" method="post" th:object="${music}">
+    <table>
+        <tr>
+            <td>Id Bai Hat</td>
+            <td><input type="text" th:field="*{idBaiHat}"></td>
+        </tr>
+        <tr>
+            <td>Name Bai Hat</td>
+            <td><input type="text" th:field="*{tenBaiHat}"></td>
+        </tr>
+        <tr>
+            <td>Nghe si </td>
+            <td><input type="text" th:field="*{ngheSi}"> </td>
+        </tr>
+        <tr>
+            <td> The loai</td>
+            <td><input type="text" th:field="*{theLoai}"></td>
+        </tr>
+        <tr>
+            <td>Link</td>
+            <td><input type="text" th:field="*{url}"></td>
+        </tr>
+        <tr>
+            <td><input type="reset" value="Reset"></td>
+            <td><input type="submit" value="Add"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
