@@ -56,7 +56,7 @@ public class BlogController {
         return "create";
     }
     @PostMapping(value = "/create")
-    public String save(@ModelAttribute Blog blog, @RequestParam("img")MultipartFile img, RedirectAttributes redirectAttributes){
+    public String save(@ModelAttribute("blog") Blog blog, @RequestParam("img") MultipartFile img, RedirectAttributes redirectAttributes){
         if(img.isEmpty()){
             blog.setLinkImg("");
         }
@@ -70,6 +70,7 @@ public class BlogController {
         }
         LocalDate today=LocalDate.now();
         blog.setDate(String.valueOf(today));
+        blogService.save(blog);
         return "redirect:/home";
     }
     @GetMapping(value = "remove/{id}")
@@ -79,23 +80,23 @@ public class BlogController {
     }
     @GetMapping(value = "/update/{id}")
     public String showUpdate(@PathVariable("id")Long id , Model model){
-        model.addAttribute(model);
+        model.addAttribute("blog",blogService.findById(id));
         return "/update";
     }
     @PostMapping(value = "/update")
-    public String doUpdate(@ModelAttribute("blog") Blog blog,@RequestParam("img")MultipartFile img){
+    public String update(@ModelAttribute ("blog") Blog blog, @RequestParam("img") MultipartFile img ){
         if (img.isEmpty()){
             blog.setLinkImg("");
         }
-        Path path=Paths.get("update/");
+        Path path = Paths.get("upload/");
         try{
-            InputStream inputStream=img.getInputStream();
-            Files.copy(inputStream,path.resolve(img.getOriginalFilename()),StandardCopyOption.REPLACE_EXISTING);
-
+            InputStream inputStream = img.getInputStream();
+            Files.copy(inputStream, path.resolve(img.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
+            blog.setLinkImg(img.getOriginalFilename().toLowerCase());
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
-        LocalDate today=LocalDate.now();
+        LocalDate today = LocalDate.now();
         blog.setDate(String.valueOf(today));
         blogService.save(blog);
         return "redirect:/home";
@@ -106,7 +107,7 @@ public class BlogController {
         if (blogService.findByContent(search).isEmpty()){
             model.addAttribute("msg","khong tim thay phim lien quan");
         }else {
-            model.addAttribute("msg","khoang"+blogService.findByContent(search).size()+"ket qua duoc tim thay");
+            model.addAttribute("msg","khoang "+blogService.findByContent(search).size()+" ket qua duoc tim thay");
         }
         return "/home";
     }
