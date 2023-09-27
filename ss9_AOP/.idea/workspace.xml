@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="752b98b1-2be8-4c6c-ac09-890f56a84ab3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ontap/product/src/main/java/com/example/product/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/java/com/example/quan_ly_san_pham/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/java/com/example/quan_ly_san_pham/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/java/com/example/quan_ly_san_pham/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/java/com/example/quan_ly_san_pham/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/java/com/example/quan_ly_san_pham/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/java/com/example/quan_ly_san_pham/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/java/com/example/quan_ly_san_pham/service/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/java/com/example/quan_ly_san_pham/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/java/com/example/quan_ly_san_pham/service/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/java/com/example/quan_ly_san_pham/validate/IdValidate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/resources/templates/product/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/resources/templates/product/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/quan_ly_san_pham/src/main/resources/templates/product/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ontap/thicuoimodule/src/main/java/com/example/thicuoimodule/entity/doanh_nghiep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1_spring_MVC/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1_spring_MVC/bai_tap/tu_dien/src/main/java/com/example/tu_dien/tu_dien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1_spring_MVC/bai_tap/tu_dien/src/main/java/com/example/tu_dien/tudienController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1_spring_MVC/bai_tap/tu_dien/src/main/java/com/example/tu_dien/tudienController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1_spring_MVC/bai_tap/tu_dien/src/main/java/com/example/tu_dien/tudienRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1_spring_MVC/bai_tap/tu_dien/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1_spring_MVC/bai_tap/tu_dien/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1_spring_MVC/bai_tap/ung_dung_tien_te/src/main/java/doi_tien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1_spring_MVC/bai_tap/ung_dung_tien_te/src/main/java/ss1/doi_tien.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1_spring_MVC/bai_tap/ung_dung_tien_te/src/main/java/ss1/doi_tien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1_spring_MVC/bai_tap/ung_dung_tien_te/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1_spring_MVC/bai_tap/ung_dung_tien_te/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1_spring_MVC/thuc_hanh/SpringGreeting/src/main/java/com/example/springgreeting/controller/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1_spring_MVC/thuc_hanh/SpringGreeting/src/main/java/com/example/springgreeting/controller/GreetingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1_spring_MVC/thuc_hanh/SpringGreeting/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1_spring_MVC/thuc_hanh/SpringGreeting/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1_spring_MVC/thuc_hanh/SpringGreeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1_spring_MVC/thuc_hanh/SpringGreeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1_spring_MVC/thuc_hanh/SpringGreeting/src/main/webapp/WEB-INF/views/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1_spring_MVC/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1_spring_MVC/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss4_Databinding/bai_tap/hom_dien_tu/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss4_Databinding/bai_tap/hom_dien_tu/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss4_Databinding/bai_tap/hom_dien_tu/src/main/java/com/example/hom_dien_tu/controller/thuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss4_Databinding/bai_tap/hom_dien_tu/src/main/java/com/example/hom_dien_tu/controller/thuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss4_Databinding/bai_tap/hom_dien_tu/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss4_Databinding/bai_tap/hom_dien_tu/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss4_Databinding/bai_tap/music/src/main/java/com/example/music/model/Music.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss4_Databinding/bai_tap/music/src/main/java/com/example/music/repository/IMusicrepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss4_Databinding/bai_tap/music/src/main/java/config/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss4_Databinding/bai_tap/music/src/main/java/config/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/src/main/java/com/example/blog/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/src/main/java/com/example/blog/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/src/main/java/com/example/blog/entity/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/src/main/java/com/example/blog/entity/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/src/main/java/com/example/blog/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/src/main/java/com/example/blog/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/src/main/java/com/example/blog/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/src/main/java/com/example/blog/repository/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/src/main/java/com/example/blog/service/CategoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/src/main/java/com/example/blog/service/CategoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/src/main/java/com/example/blog/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss6_JPA/bai_tap/Blog/src/main/java/com/example/blog/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7_Spring Data Repository/bai_tap/Blog/src/main/resources/templates/blog/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7_Spring Data Repository/bai_tap/Blog/src/main/resources/templates/blog/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/java/com/example/thong_tin_bai_hat/Repository/MusicRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/java/com/example/thong_tin_bai_hat/Repository/MusicRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/java/com/example/thong_tin_bai_hat/controller/MusicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/java/com/example/thong_tin_bai_hat/controller/MusicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/java/com/example/thong_tin_bai_hat/entity/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/java/com/example/thong_tin_bai_hat/entity/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/resources/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/resources/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/resources/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/resources/templates/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss8_validate/bai_tap/thong_tin_bai_hat/src/main/resources/templates/list.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PVZnadFkGyiiRQPYBcVnxdplXj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/codegym/module4/ss9_AOP"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="752b98b1-2be8-4c6c-ac09-890f56a84ab3" name="Changes" comment="" />
+      <created>1683544377090</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683544377090</updated>
+      <workItem from="1683544378433" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

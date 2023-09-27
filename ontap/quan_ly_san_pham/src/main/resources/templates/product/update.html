@@ -1,0 +1,70 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div>
+  <h2>Update</h2>
+</div>
+<div>
+  <form th:action="@{/product/update}" method="post" th:object="${product}">
+    <label for="id" style="margin-left: 20px">Id: <span style="color: red;"> *</span></label>
+    <div class="form-group">
+      <input id="id" th:field="*{id}"  placeholder="id" class="form-control" readonly />
+      <span th:if="${#fields.hasErrors('id')}" th:errors="*{id}" style="color: red"></span>
+    </div>
+    <label for="name" style="margin-left: 20px">Name: <span style="color: red;"> *</span></label>
+    <div class="form-group">
+      <input id="name" th:field="*{name}"  placeholder="Name" class="form-control" />
+      <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red"></span>
+    </div>
+    <label for="category" style="margin-left: 20px">category Name: <span style="color: red;"> *</span></label>
+    <div class="form-group">
+      <select th:field="*{category}"   id="category" style="margin-left: 20px">
+        <option value=""></option>
+        <option th:each="category : ${categories}"
+                th:value="${category.categoryId}"
+                th:text="${category.categoryName}"
+                th:selected="${category.categoryId.equals(product.category.categoryId)}" />
+      </select>
+      <span th:if="${#fields.hasErrors('category')}" th:errors="*{category}" style="color: red"></span>
+    </div>
+    <label for="price" style="margin-left: 20px">Giá tiền: <span style="color: red;"> *</span></label>
+    <div class="form-group">
+      <input id="price" th:field="*{price}"  placeholder="Name" class="form-control" />
+      <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}" style="color: red"></span>
+    </div>
+    <label for="date" style="margin-left: 20px">Date: <span style="color: red;"> *</span></label>
+    <div class="form-group">
+      <input type="date" id="date" th:field="*{date}" placeholder="Birthdate" class="form-control"/>
+      <span th:if="${#fields.hasErrors('date')}" th:errors="*{date}" style="color: red"></span>
+    </div>
+
+    <button type="submit" style="margin-left: 30px"> Add</button>
+    <a th:href="@{/product/list}" style="margin-left: 30px"> Back</a>
+  </form>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

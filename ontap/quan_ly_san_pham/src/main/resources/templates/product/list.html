@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 1rem;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        th, td {
+            text-align: left;
+            padding: 1rem;
+        }
+        th {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <a th:href="@{/product/create}">
+        <button type="button">Thêm mới</button>
+    </a>
+    <a th:href="@{/product/list}">
+        <button>List</button>
+    </a>
+    <br><br>
+    <form th:action="@{/product/search}" method="get">
+        <div>
+            <input type="text" th:value="${searchAll}"  placeholder="nhập vào ..."  name="searchAll" >
+            <button type="submit" >Search</button>
+        </div>
+    </form>
+</div>
+<br><br>
+<div>
+    <form th:action="@{/product/deleteAll}" >
+        <table>
+            <thead>
+            <tr>
+                <th>Stt</th>
+                <th>ID</th>
+                <th>Tên</th>
+                <th>Thể loại</th>
+                <th>Giá tiền</th>
+                <th>Ngày ra mắt</th>
+                <th>Update</th>
+                <th>View</th>
+                <th>Delete</th>
+                <th><input type="checkbox" onclick="selectAll(this)"/></th>
+            </tr>
+            </thead>
+            <tbody th:each="st, iterStat: ${products}">
+            <tr th:object="${st}">
+                <td th:text="${iterStat.count}"></td>
+                <td th:text="*{st.id}"></td>
+                <td th:text="*{st.name}"></td>
+                <td th:text="*{category.categoryName}"></td>
+                <td th:text="*{st.price}"></td>
+                <td th:text="*{st.date}"></td>
+                <td>
+                    <a th:href="@{/product/update/{id}(id=*{st.id})}">Update</a>
+                </td>
+                <td>
+                    <a th:href="@{/product/view(id=*{st.id})}">View</a>
+                </td>
+                <td>
+                    <!--                    <a th:href="@{/room/delete/{id}(id=*{id})}" >Delete</a>-->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" th:attr="data-id=*{st.id}">
+                        Delete
+                    </button>
+
+                </td>
+                <td><input type="checkbox" th:value="*{st.id}" name="ids"></td>
+            </tr>
+
+            </tbody>
+        </table>
+        <!--            modal xóa 1-->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Confirm Delete</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure confirm delete?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a id="deleteLink">
+                            <button type="button">Delete</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a type="button"  data-toggle="modal" data-target="#modelId" style="margin-left: 94%;">
+            Delete All
+        </a>
+        <div class="pagination" style="margin-left: 730px;">
+            <a th:if="${page.hasPrevious()}" th:href="@{/product/list(size=${page.size}, page=${page.getNumber()})}"
+               style="margin-right: 10px;">Trước</a>
+            <a th:if="${page.hasPrevious()}" th:href="@{/product/list(search=${page.size}, searchAll =${searchAll}, page=${page.getNumber()})}"
+               th:text="${page.getNumber()}" style="margin-right: 10px;"></a>
+            <a th:if="${page.hasNext() || page.hasPrevious()}" th:href="@{/product/search(size=${page.size},searchAll =${searchAll}, page=${page.getNumber() + 1})}"
+               th:text="${page.getNumber() + 1}" style="margin-right: 10px;"></a>
+            <a th:if="${page.hasNext()}" th:href="@{/product/search(size=${page.size},searchAll =${searchAll}, page=${page.getNumber() + 2})}"
+               th:text="${page.getNumber() + 2}" style="margin-right: 10px;"></a>
+            <a th:if="${page.hasNext()}" th:href="@{/product/list(size=${page.size}, searchAll =${searchAll},page=${page.getNumber() + 2})}"
+               style="margin-right: 10px;" >Sau</a>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Confirm Delete</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure confirm delete?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script>
+    function selectAll(checkbox) {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach((box) => {
+            if (box !== checkbox) {
+                box.checked = checkbox.checked;
+            }
+        });
+    }
+    $('#staticBackdrop').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget)
+        var id = button.data('id')
+        $('#deleteLink').attr("href", "/product/delete/" + id)
+    })
+
+</script>
+</body>
+</html>
